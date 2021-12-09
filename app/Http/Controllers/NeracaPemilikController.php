@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Laporan_keuangan;
 use App\Models\Neraca_saldo;
 
-class NeracaController extends Controller
+class NeracaPemilikController extends Controller
 {
 	public function index()
 	{
 		$lk = Laporan_keuangan::all()->groupBy('periode_lk');
-		return view('admins.pages.neraca', compact('lk'));
+		return view('pemilik.pages.neraca_pemilik', compact('lk'));
 	}
 
 	public function detail($periode)
@@ -93,8 +93,8 @@ class NeracaController extends Controller
 
 		// GetUtangUsaha
 		// cek
-		$utangUsaha = Neraca_saldo::where('periode_ns', $periode)->where('daftar_akuns_id', 11)->get()->first();
-		if ($utangUsaha != null) {
+		$perlengkapan = Neraca_saldo::where('periode_ns', $periode)->where('daftar_akuns_id', 11)->get()->first();
+		if ($perlengkapan != null) {
 			$GetUtangUsahaThisPeriodeKredit = Neraca_saldo::where('periode_ns', $periode)->where('daftar_akuns_id', 11)->get()->first()->kredit_ns;
 			$GetUtangUsahaThisPeriodeDebet = Neraca_saldo::where('periode_ns', $periode)->where('daftar_akuns_id', 11)->get()->first()->debet_ns;
 			if ($GetUtangUsahaThisPeriodeKredit) {
@@ -113,6 +113,8 @@ class NeracaController extends Controller
 
 		$GetPasiva = $GetUtangUsahaThisPeriode+$GetModalAkhirThisPeriode;
 
-		return view('admins.pages.detail_neraca',compact('periode', 'GetKasThisPeriode', 'GetBankThisPeriode', 'GetPiutangThisPeriode', 'GetPeralatanThisPeriode', 'GetPerlengkapanThisPeriode', 'GetUtangUsahaThisPeriode', 'GetModalAkhirThisPeriode', 'GetActiva', 'GetPasiva'));
+		return view('pemilik.pages.detail_neraca_pemilik',compact('periode', 'GetKasThisPeriode', 'GetBankThisPeriode', 'GetPiutangThisPeriode', 'GetPeralatanThisPeriode', 'GetPerlengkapanThisPeriode', 'GetUtangUsahaThisPeriode', 'GetModalAkhirThisPeriode', 'GetActiva', 'GetPasiva'));
 	}
+}
+
 }

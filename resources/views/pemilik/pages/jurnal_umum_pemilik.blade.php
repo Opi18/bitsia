@@ -22,7 +22,7 @@
               <tbody>
                 @foreach($ju as $ju)
                 <tr class="odd">
-                  <td><a href="/jurnal_umum/{{$ju->first()->periode_ju}}" class="btn btn-primary btn-sm" type="submit">Detail</a></td>
+                  <td><a href="/detail_jurnal_umum_pemilik/{{$ju->first()->periode_ju}}" class="btn btn-primary btn-sm" type="submit">Detail</a></td>
                   <td>{{$ju->first()->periode_ju}}</td>
                 </tr>
                 @endforeach

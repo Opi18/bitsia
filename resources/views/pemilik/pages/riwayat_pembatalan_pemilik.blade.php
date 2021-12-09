@@ -14,12 +14,13 @@
           <div class="card-body">
             <div class="row no-print" style="padding-right: : 90%; margin-bottom: 2%">
               <a onclick="return window.print();" target="blank" class="btn btn-primary btn-md" > <i class="fa fa-print"></i><span></span> </a>
-              <button class="btn btn-primary btn-md ml-2" data-toggle="modal" data-target="#modal_cari_data_riwayat_pembatalan_pemilik">
+              <button class="ml-2 btn btn-primary btn-md" data-toggle="modal" data-target="#modal_cari_data_pemasukan">
                 <i class="fa fa-filter"></i><span></span>
               </button>
             </div>
+
             <div class="row text-center">
-              <div class="modal fade modal-success" id="modal_cari_data_riwayat_pembatalan_pemilik" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade modal-success" id="modal_cari_data_pemasukan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -29,7 +30,7 @@
                       </button>
                     </div>
                     <div class="modal-body text-left">
-                      <form method="post" action="/riwayat_pembatalan_pemilik/cari">
+                      <form method="post" action="/riwayat_pembatalan">
                         {{csrf_field()}}
 
                         <div class="form-group">
@@ -45,7 +46,7 @@
                         <div class="modal-footer">
                           <button class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
 
-                          <button class="btn btn-primary btn-sm" type="submit">Submit
+                          <button class="btn btn-primary btn-sm" type="submit">Cari
                           </button>
                         </div>
                       </form>
@@ -58,7 +59,7 @@
             <div class="col-sm-12" >
              <p><h4><b><center>PT. BALI INTERNASIONAL TEKNOLOGI</center></b></h4></p>
              <p><center><h4><b>Riwayat Pembatalan Transaksi</b></h4></center></p>
-             <p><h5><center><b>Periode 01/01/2021 sampai 31/01/2021</b></center></h5></p>
+             <p><h5><center><b>Periode {{$tgl_awal}} sampai {{$tgl_akhir}}</b></center></h5></p>
              <hr style="border: 1px solid black">
              <br><br>
 
@@ -78,11 +79,11 @@
                 @foreach ($data_pemasukan as $i => $p)
                 <tr class="odd">
                   <td>{{$i+1}}</td>
-                  <td>{{$p -> daftar_akuns_id}}</td>
+                  <td>{{$p -> Daftar_akun->nama_akun}}</td>
                   <td>{{$p -> keterangan_transaksi}}</td>
                   <td>{{$p -> nominal_transaksi}}</td>
                   <td>{{$p -> tgl_transaksi}}</td>
-                  <td>{{$p -> data_users_id}}</td>
+                  <td>{{$p -> Data_user->nama}}</td>
                 </tr>
                 @endforeach
               </tbody>
@@ -104,11 +105,11 @@
                 @foreach ($data_pengeluaran as $i => $p)
                 <tr class="odd">
                   <td>{{$i+1}}</td>
-                  <td>{{$p -> daftar_akuns_id}}</td>
+                  <td>{{$p -> Daftar_akun->nama_akun}}</td>
                   <td>{{$p -> keterangan_transaksi}}</td>
                   <td>{{$p -> nominal_transaksi}}</td>
                   <td>{{$p -> tgl_transaksi}}</td>
-                  <td>{{$p -> data_users_id}}</td>
+                  <td>{{$p -> Data_user->nama}}</td>
                 </tr>
                 @endforeach
               </tbody>
@@ -130,11 +131,11 @@
                 @foreach ($data_hutang as $i => $p)
                 <tr class="odd">
                   <td>{{$i+1}}</td>
-                  <td>{{$p -> daftar_akuns_id}}</td>
+                  <td>{{$p -> Daftar_akun->nama_akun}}</td>
                   <td>{{$p -> keterangan_transaksi}}</td>
                   <td>{{$p -> nominal_transaksi}}</td>
                   <td>{{$p -> tgl_transaksi}}</td>
-                  <td>{{$p -> data_users_id}}</td>
+                  <td>{{$p -> Data_user->nama}}</td>
                 </tr>
                 @endforeach
               </tbody>
@@ -156,11 +157,11 @@
                 @foreach ($data_piutang as $i => $p)
                 <tr class="odd">
                   <td>{{$i+1}}</td>
-                  <td>{{$p -> daftar_akuns_id}}</td>
+                  <td>{{$p -> Daftar_akun->nama_akun}}</td>
                   <td>{{$p -> keterangan_transaksi}}</td>
                   <td>{{$p -> nominal_transaksi}}</td>
                   <td>{{$p -> tgl_transaksi}}</td>
-                  <td>{{$p -> data_users_id}}</td>
+                  <td>{{$p -> Data_user->nama}}</td>
                 </tr>
                 @endforeach
               </tbody>

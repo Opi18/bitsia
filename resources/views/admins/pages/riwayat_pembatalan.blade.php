@@ -56,15 +56,25 @@
               </div>
             </div>
 
-            <div class="col-sm-12" >
-             <p><h4><b><center>PT. BALI INTERNASIONAL TEKNOLOGI</center></b></h4></p>
-             <p><center><h4><b>Riwayat Pembatalan Transaksi</b></h4></center></p>
-             <p><h5><center><b>Periode {{$tgl_awal}} sampai {{$tgl_akhir}}</b></center></h5></p>
-             <hr style="border: 1px solid black">
-             <br><br>
+            <div class="row justify-content-center">
+              <div class="col-md-2">
+                <img width="160px" style="border: 3px solid grey; border-radius: 50%" src="{{asset('lte/dist/img/bit-bg-w.png') }}" alt="User Image">
+              </div>
 
-             <div class="mt-3"><p class="card-title"><b>Data Pemasukan</b></p></div>
-             <table id="example1" class="table table-bordered table-striped dtr-inline collapsed text-center" role="grid" aria-describedby="example1_info">
+              <div class="col-md-7 text-center">
+                <?php $date = new DateTime($tgl_akhir) ?>
+                <h2 class="text-danger"><strong>PT. BALI INTERNASIONAL TEKNOLOGI</strong></h2>
+                <h5 class="text-primary text-uppercase"><strong>RIWAYAT PEMBATALAN TRANSAKSI | PERIODE {{$date->format('d F Y')}}</strong></h5>
+                <h5>Jl Halmahera No 47 A Denpasar , Bali Indonesia</h5>
+                <h5>Telp. : (+62)-3614748222, Email : cloud.balitekno@gmail.com</h5>
+              </div>
+              <div class="col-md-12">
+                <hr style="border-top: 4px solid grey; margin-top: 35px">
+              </div>
+            </div>
+
+            <div class="mt-3"><p class="card-title"><b>Data Pemasukan</b></p></div>
+            <table id="example1" class="table table-bordered table-striped dtr-inline collapsed text-center" role="grid" aria-describedby="example1_info">
               <thead>
                 <tr role="row">
                   <th>No</th>

@@ -1,4 +1,4 @@
-@extends('admins/layouts/main')
+@extends('pemilik/layouts/main')
 
 @section('title','SIA | Laporan Jurnal Umum')
 
@@ -50,7 +50,6 @@
                   <tbody>
                     <tr class="odd">
                       <td rowspan="{{$jtransaksi}}">{{date('F', strtotime($periode))}}</td>
-                      <?php $debet=0; $kredit=0; ?>
                       @foreach($transaksi as $t)
                       <td>{{date('d', strtotime($t->tgl_ju))}}</td>
                       <td class="<?php if ($t->debet_ju == null){
@@ -59,13 +58,12 @@
                         <td></td>
                         <td>{{$t->debet_ju}}</td>
                         <td>{{$t->kredit_ju}}</td>
-                        <?php $debet=$debet+$t->debet_ju; $kredit=$kredit+$t->kredit_ju; ?>
                       </tr>
                       @endforeach
                       <tr>
                         <th colspan="4">Total</th>
-                        <th>{{$debet}}</th>
-                        <th>{{$kredit}}</th>
+                        <th>{{$t->sum('debet_ju')}}</th>
+                        <th>{{$t->sum('kredit_ju')}}</th>
                       </tr>
                     </thead>
                   </table>

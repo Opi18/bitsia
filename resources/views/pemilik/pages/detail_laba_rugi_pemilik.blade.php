@@ -1,4 +1,4 @@
-@extends('admins/layouts/main')
+@extends('pemilik/layouts/main')
 
 @section('title','SIA | Laporan Laba Rugi')
 
@@ -100,16 +100,15 @@
                     </div><br>
                     <div class="row justify-content-center">
                       <div class="col-md-5"></div>
-                      <div class="col-md-3"><strong>@if($GetLabaKotor<=0) Perusahaan Rugi  @else Laba Kotor @endif</strong></div>
+                      <div class="col-md-3"><strong>Laba Kotor</strong></div>
                       <div class="col-md-2"><strong>Rp. {{number_format($GetLabaKotor)}}</strong></div>
                     </div>
-                    @if($GetPPH25 != 0)              
                     <div class="row justify-content-center">
                       <div class="col-md-5"></div>
                       <div class="col-md-4"></div>
                       <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: 1px"></div>
                       <div class="col-md-1">-</div>
-                    </div>
+                    </div>              
                     <div class="row justify-content-center">
                       <div class="col-md-5"><p>Pajak PPh Pasal 25</p></div>
                       <div class="col-md-3"><p>Rp. {{number_format($GetPPH25)}}</p></div>
@@ -120,7 +119,6 @@
                       <div class="col-md-3"><strong>Laba Bersih</strong></div>
                       <div class="col-md-2"><strong>Rp. {{number_format($GetLabaBersih)}}</strong></div>
                     </div>
-                    @endif
                     <div class="row justify-content-center">
                       <div class="col-md-5"></div>
                       <div class="col-md-4"></div>

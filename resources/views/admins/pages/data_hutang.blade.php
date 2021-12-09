@@ -125,9 +125,9 @@
                   <td>{{$p -> keterangan_transaksi}}</td>
                   <td>{{number_format($p -> nominal_transaksi)}}</td>
                   <td>
-                    <button type="button" class="btn btn" data-toggle="modal" data-target="#myModalUbahDataHutang{{$p -> id}}">
+                    <!-- <button type="button" class="btn btn" data-toggle="modal" data-target="#myModalUbahDataHutang{{$p -> id}}">
                       <i class="fa fa-pen"></i><span></span>
-                    </button>
+                    </button> -->
                     <a id-pemasukan="{{$p->id}}" class="btn btn-sm batal-trx"><i class="fa fa-times"></i></a>
                   </td>
                 </tr>

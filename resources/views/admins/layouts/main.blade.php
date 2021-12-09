@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('lte/')}}/plugins/fontawesome-free/css/all.min.css">
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="{{ asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('lte/')}}/dist/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('lte/plugins/datatables/jquery.dataTables.min.css')}}">
@@ -64,11 +69,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<!-- REQUIRED SCRIPTS -->
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<script src="{{ asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
@@ -125,7 +125,7 @@
   });
 </script>
 <!-- garafik -->
-<script src="lte/dist/js/pages/dashboard3.js"></script>
+<!-- <script src="lte/dist/js/pages/dashboard3.js"></script> -->
 <!-- PAGE PLUGINS -->
 <!-- jQuery Mapael -->
 <script src="{{ asset('lte/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
@@ -139,5 +139,6 @@
 <script src="{{ asset('lte/dist/js/demo.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+@include('sweetalert::alert')
 </body>
 </html>

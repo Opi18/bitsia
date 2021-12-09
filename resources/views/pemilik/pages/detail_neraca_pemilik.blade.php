@@ -1,4 +1,4 @@
-@extends('admins/layouts/main')
+@extends('pemilik/layouts/main')
 
 @section('title','SIA | Laporan Neraca')
 
@@ -64,21 +64,16 @@
                       <div class="col-md-1"><p>+</p></div>
                     </div>
                     <div class="row justify-content-center">
-                      <div class="col-md-3"><p>Perlengkapan</p></div>
-                      <div class="col-md-6"><p>Rp. {{number_format($GetPerlengkapanThisPeriode)}}</p></div>
-                      <div class="col-md-2"><strong>Rp. {{number_format($GetPasiva)}}</strong></div>
-                    </div>
-                    <div class="row justify-content-center">
                       <div class="col-md-3"><p>Peralatan</p></div>
                       <div class="col-md-6"><p>Rp. {{number_format($GetPeralatanThisPeriode)}}</p></div>
-                      <div class="col-md-2"></div>
+                      <div class="col-md-2"><strong>Rp. {{number_format($GetPasiva)}}</strong></div>
                     </div>
                     <div class="row justify-content-center">
                       <div class="col-md-3"></div>
                       <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: 1px"></div>
                       <div class="col-md-1"><p>+</p></div>
                       <div class="col-md-2"></div>
-                      <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: -45px"></div>
+                      <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: -15px"></div>
                       <div class="col-md-1"></div>
                     </div>
                     <div class="row justify-content-center">
@@ -86,7 +81,7 @@
                       <div class="col-md-2"><strong>Rp.{{number_format($GetActiva)}}</strong></div>
                       <div class="col-md-1"></div>
                       <div class="col-md-2"></div>
-                      <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: -82px"></div>
+                      <div class="col-md-2"><hr style="border-top: 2px solid grey; margin-top: -53px"></div>
                       <div class="col-md-1"></div>
                     </div><br>
                     <div class="row justify-content-center">

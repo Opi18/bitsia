@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use\App\Models\Data_transaksi;
 use\App\Models\Data_user;
 use\App\Models\Daftar_akun;
+use Alert;
 
 class DataPengeluaranController extends Controller
 {
@@ -111,6 +112,7 @@ class DataPengeluaranController extends Controller
             $data_pengeluaran->nominal_transaksi=$request->nominal_transaksi;
             $data_pengeluaran->save();
         }
+        alert('Data Berhasil Di Tambah', ' ', 'success');
         return redirect('/data_pengeluaran');
     }
 
@@ -150,6 +152,7 @@ class DataPengeluaranController extends Controller
         $data_pengeluaran->nominal_transaksi=$request->nominal_transaksi;
         $data_pengeluaran->tgl_transaksi=$request->tgl_transaksi;
         $data_pengeluaran->save();
+        alert('Data Berhasil Di Ubah', ' ', 'success');
         return redirect('/data_pengeluaran');
     }
 

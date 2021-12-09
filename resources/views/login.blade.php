@@ -69,5 +69,7 @@
   <script src="{{asset('lte/')}}/dist/js/demo.js"></script>
   <!-- garafik -->
   <script src="lte/dist/js/pages/dashboard3.js"></script>
+  @include('sweetalert::alert')
+  
 </body>
 </html>

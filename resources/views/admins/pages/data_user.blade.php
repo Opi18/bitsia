@@ -37,13 +37,12 @@
 
                         <div class="form-group">
                           <label for="nama">Nama</label>
-                          <input required="" name="nama" type="text" class="form-control" id="nama">
+                          <input required="" name="nama" type="text" class="form-control" id="nama" placeholder="Input Text"> 
                         </div>
 
                         <div class="form-group">
                           <label for="status">Status</label>
-                          <select name="status" class="form-control">
-                            <option>Pilih</option>
+                          <select name="status" class="form-control" >
                             <option>Accounting</option>
                             <option>Pemilik</option>
                           </select>

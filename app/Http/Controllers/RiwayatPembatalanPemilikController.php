@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use\App\Models\Data_transaksi;
+use\App\Models\Data_user;
+use\App\Models\Daftar_akun;
 
 class RiwayatPembatalanPemilikController extends Controller
 {
+
+    public function formFilter()
+    {
+        return view('pemilik.pages.cari_riwayat_pembatalan_pemilik');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,17 +25,18 @@ class RiwayatPembatalanPemilikController extends Controller
         $data_pengeluaran=Data_transaksi::where('jenis_transaksi', 'Data Pengeluaran')->where('transaksi_dibatalkan', 1)->get();
         $data_hutang=Data_transaksi::where('jenis_transaksi', 'Data Hutang')->where('transaksi_dibatalkan', 1)->get();
         $data_piutang=Data_transaksi::where('jenis_transaksi', 'Data Piutang')->where('transaksi_dibatalkan', 1)->get();
-        return view('admins.pages.riwayat_pembatalan_pemilik', compact('data_pemasukan','data_pengeluaran','data_hutang','data_piutang'));
+        return view('pemilik.pages.riwayat_pembatalan_pemilik', compact('data_pemasukan','data_pengeluaran','data_hutang','data_piutang'));
     }
 
-    public function filter(Request $request)
+    public function Filter(Request $request)
     {
-        $user=Data_user::all();
-        $daftar_akun=Daftar_akun::all();
         $tgl_awal=$request->tgl_awal;
-        $tgl_akhir=$request->tgl_akhir;
-        $riwayat_pembatalan_pemilik = Data_transaksi::where('jenis_transaksi', 'Riwayat Pembatalan')->whereBetween('tgl_transaksi',[$tgl_awal,$tgl_akhir])->get();
-        return view('admins.pages.riwayat_pembatalan_pemilik', compact('riwayat_pembatalan_pemilik','user','daftar_akun'));
+        $tgl_akhir=$request->tgl_akhir;        
+        $data_pemasukan=Data_transaksi::where('jenis_transaksi', 'Data Pemasukan')->where('transaksi_dibatalkan', 1)->whereBetween('tgl_transaksi',[$tgl_awal,$tgl_akhir])->get();
+        $data_pengeluaran=Data_transaksi::where('jenis_transaksi', 'Data Pengeluaran')->where('transaksi_dibatalkan', 1)->whereBetween('tgl_transaksi',[$tgl_awal,$tgl_akhir])->get();
+        $data_hutang=Data_transaksi::where('jenis_transaksi', 'Data Hutang')->where('transaksi_dibatalkan', 1)->whereBetween('tgl_transaksi',[$tgl_awal,$tgl_akhir])->get();
+        $data_piutang=Data_transaksi::where('jenis_transaksi', 'Data Piutang')->where('transaksi_dibatalkan', 1)->whereBetween('tgl_transaksi',[$tgl_awal,$tgl_akhir])->get();
+        return view('pemilik.pages.riwayat_pembatalan_pemilik', compact('data_pemasukan','data_pengeluaran','data_hutang','data_piutang','tgl_awal','tgl_akhir'));
     }
 
     /**

@@ -43,7 +43,7 @@ class DataTransaksiController extends Controller
 				$ju->daftar_akuns_id=$data_transaksi[$i]['daftar_akuns_id'];
 				$ju->data_transaksis_id = $data_transaksi[$i]['id'];
 				$ju->tgl_ju = $data_transaksi[$i]['tgl_transaksi'];
-				if (($data_transaksi[$i]['daftar_akuns_id'] == 1 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 4 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 5 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Piutang') OR ($data_transaksi[$i]['daftar_akuns_id'] == 14 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 6 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 7 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 8 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 9 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 10 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 15 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran')) {
+				if (($data_transaksi[$i]['daftar_akuns_id'] == 1 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 4 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 5 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Piutang') OR ($data_transaksi[$i]['daftar_akuns_id'] == 14 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 6 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 7 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 8 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 9 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 10 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 15 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 12 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan')) {
 
 					$ju->debet_ju = $data_transaksi[$i]['nominal_transaksi'];
 
@@ -62,7 +62,7 @@ class DataTransaksiController extends Controller
 				$ju->daftar_akuns_id=$data_transaksi[$i]['daftar_akuns_id'];
 				$ju->data_transaksis_id = $data_transaksi[$i]['id'];
 				$ju->tgl_ju = $data_transaksi[$i]['tgl_transaksi'];
-				if (($data_transaksi[$i]['daftar_akuns_id'] == 1 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 4 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 5 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 14 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 6 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 7 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 8 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 9 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 10 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 15 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran')) {
+				if (($data_transaksi[$i]['daftar_akuns_id'] == 1 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 4 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 5 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 14 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 6 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 7 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 8 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan') OR ($data_transaksi[$i]['daftar_akuns_id'] == 9 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 10 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 15 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pengeluaran') OR ($data_transaksi[$i]['daftar_akuns_id'] == 12 AND $data_transaksi[$i]['jenis_transaksi'] == 'Data Pemasukan')) {
 
 					$ju->debet_ju = $data_transaksi[$i]['nominal_transaksi'];
 
@@ -142,8 +142,8 @@ class DataTransaksiController extends Controller
 
 		// GetBebanListrikAir
 		// cektersediabeban
-		$CekTersediaBebanListrikAir=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 6)->get();
-		if ($CekTersediaBebanListrikAir) {
+		$CekTersediaBebanListrikAir=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 6)->get()->first();
+		if ($CekTersediaBebanListrikAir != null) {
 			$GetBebanListrikAirKredit=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 6)->get()->first()->kredit_ns;
 			$GetBebanListrikAirDebet=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 6)->get()->first()->debet_ns;
 			if ($GetBebanListrikAirKredit==null) {
@@ -157,8 +157,8 @@ class DataTransaksiController extends Controller
 
 		// GetBebanTelepon
 		// cektersediabeban
-		$CekTersediaBebanTelepon=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 7)->get();
-		if ($CekTersediaBebanTelepon) {
+		$CekTersediaBebanTelepon=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 7)->get()->first();
+		if ($CekTersediaBebanTelepon != null) {
 			$GetBebanTeleponKredit=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 7)->get()->first()->kredit_ns;
 			$GetBebanTeleponDebet=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 7)->get()->first()->debet_ns;
 			if ($GetBebanTeleponKredit==null) {
@@ -172,8 +172,8 @@ class DataTransaksiController extends Controller
 
 		// GetBebanGaji
 		// cektersediabeban
-		$CekTersediaBebanGaji=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 10)->get();
-		if ($CekTersediaBebanGaji) {
+		$CekTersediaBebanGaji=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 10)->get()->first();
+		if ($CekTersediaBebanGaji != null) {
 			$GetBebanGajiKredit=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 10)->get()->first()->kredit_ns;
 			$GetBebanGajiDebet=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 10)->get()->first()->debet_ns;
 			if ($GetBebanGajiKredit==null) {
@@ -187,8 +187,8 @@ class DataTransaksiController extends Controller
 
 		// GetPPH21
 		// cektersediabeban
-		$CekTersediaPPH21=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 15)->get();
-		if ($CekTersediaPPH21) {
+		$CekTersediaPPH21=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 15)->get()->first();
+		if ($CekTersediaPPH21 != null) {
 			$GetPPH21Kredit=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 15)->get()->first()->kredit_ns;
 			$GetPPH21Debet=Neraca_saldo::where('periode_ns',$tgl_akhir)->where('daftar_akuns_id', 15)->get()->first()->debet_ns;
 			if ($GetPPH21Kredit==null) {
@@ -202,7 +202,9 @@ class DataTransaksiController extends Controller
 
 		$GetTotalBeban = $GetBebanListrikAir+$GetBebanTelepon+$GetBebanGaji+$GetPPH21;
 		$GetLabaKotor = $GetPendapatanBersih-$GetTotalBeban;
-		if ($GetLabaKotor <= 50000000) {
+		if ($GetLabaKotor < 0) {
+			$GetPPH25 = 0;
+		}elseif ($GetLabaKotor <= 50000000) {
 			$GetPPH25 = $GetLabaKotor*0.05;
 		}elseif ($GetLabaKotor <= 250000000) {
 			$GetPPH25 = $GetLabaKotor*0.15;
@@ -222,25 +224,28 @@ class DataTransaksiController extends Controller
 		}
 		$LaporanLabaRugi->nominal_lk = $GetLabaBersih;
 		$LaporanLabaRugi->periode_lk = $tgl_akhir;
+		$LaporanLabaRugi->tahun_lk = date("Y", strtotime($tgl_akhir));
 		$LaporanLabaRugi->save();
 
+		if ($GetPPH25 != 0) {
 		// addPPh25ToBukuBesar
-		$bbToPPh = new Buku_besar;
-		$bbToPPh->daftar_akuns_id=16;
-		$bbToPPh->tgl_bb=date('Y-m-d');
-		$bbToPPh->keterangan_bb="Pajak PPh Pasal 25";
-		$bbToPPh->debet_bb=$GetPPH25;
-		$bbToPPh->periode_bb=$tgl_akhir;
-		$bbToPPh->save();
+			$bbToPPh = new Buku_besar;
+			$bbToPPh->daftar_akuns_id=16;
+			$bbToPPh->tgl_bb=date('Y-m-d');
+			$bbToPPh->keterangan_bb="Pajak PPh Pasal 25";
+			$bbToPPh->debet_bb=$GetPPH25;
+			$bbToPPh->periode_bb=$tgl_akhir;
+			$bbToPPh->save();
 
 		// addPPh25ToBukuBesar
-		$bbToBank = new Buku_besar;
-		$bbToBank->daftar_akuns_id=4;
-		$bbToBank->tgl_bb=date('Y-m-d');
-		$bbToBank->keterangan_bb="Pajak PPh Pasal 25";
-		$bbToBank->kredit_bb=$GetPPH25;
-		$bbToBank->periode_bb=$tgl_akhir;
-		$bbToBank->save();
+			$bbToBank = new Buku_besar;
+			$bbToBank->daftar_akuns_id=4;
+			$bbToBank->tgl_bb=date('Y-m-d');
+			$bbToBank->keterangan_bb="Pajak PPh Pasal 25";
+			$bbToBank->kredit_bb=$GetPPH25;
+			$bbToBank->periode_bb=$tgl_akhir;
+			$bbToBank->save();
+		}
 
 
 		// Readd neraca saldo
@@ -276,12 +281,18 @@ class DataTransaksiController extends Controller
 		}
 
 		// GetPrive
-		$GetPriveThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 9)->get()->first()->kredit_ns;
-		$GetPriveThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 9)->get()->first()->debet_ns;
-		if ($GetPriveThisPeriodeKredit) {
-			$GetPriveThisPeriode=$GetPriveThisPeriodeKredit;
-		}elseif ($GetPriveThisPeriodeDebet) {
-			$GetPriveThisPeriode=$GetPriveThisPeriodeDebet;
+		// CekKetersediaanPrive
+		$CekPriveThisPeriode = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 9)->get()->first();
+		if ($CekPriveThisPeriode != null) {
+			$GetPriveThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 9)->get()->first()->kredit_ns;
+			$GetPriveThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 9)->get()->first()->debet_ns;
+			if ($GetPriveThisPeriodeKredit) {
+				$GetPriveThisPeriode=$GetPriveThisPeriodeKredit;
+			}elseif ($GetPriveThisPeriodeDebet) {
+				$GetPriveThisPeriode=$GetPriveThisPeriodeDebet;
+			}	
+		}else{
+			$GetPriveThisPeriode=0;
 		}
 
 		// GetLabaRugi
@@ -291,13 +302,18 @@ class DataTransaksiController extends Controller
 		$GetModalAkhir = $GetMA_LR-$GetPriveThisPeriode;
 
 		// add modal next month
+		$newMonth = $request->tgl_awal;
+		$ModalNectMonth = Data_transaksi::where('tgl_transaksi', date("Y-m-d", strtotime('+1 month', strtotime ($newMonth))));
+		if ($ModalNectMonth != null) {
+			$ModalNectMonth->delete();
+		}
 		$modal= new Data_transaksi;
 		$modal->data_users_id=session()->get('dataLoginAdmins')['id'];
 		$modal->daftar_akuns_id=3;
 		$modal->jenis_transaksi='Data Pemasukan';
 		$modal->keterangan_transaksi='Modal Awal';
 		$modal->nominal_transaksi=$GetModalAkhir;
-		$modal->tgl_transaksi=date($tgl_awal, strtotime('+1 month'));;
+		$modal->tgl_transaksi=date("Y-m-d", strtotime('+1 month', strtotime ($newMonth)));
 		$modal->save();
 
 		$kas= new Data_transaksi;
@@ -306,7 +322,7 @@ class DataTransaksiController extends Controller
 		$kas->jenis_transaksi='Data Pemasukan';
 		$kas->keterangan_transaksi='Modal Awal';
 		$kas->nominal_transaksi=$GetModalAkhir*0.06;
-		$kas->tgl_transaksi=date($tgl_awal, strtotime('+1 month'));;
+		$kas->tgl_transaksi=date("Y-m-d", strtotime('+1 month', strtotime ($newMonth)));
 		$kas->save();
 
 		$bank= new Data_transaksi;
@@ -315,7 +331,7 @@ class DataTransaksiController extends Controller
 		$bank->jenis_transaksi='Data Pemasukan';
 		$bank->keterangan_transaksi='Modal Awal';
 		$bank->nominal_transaksi=$GetModalAkhir*0.94;
-		$bank->tgl_transaksi=date($tgl_awal, strtotime('+1 month'));;
+		$bank->tgl_transaksi=date("Y-m-d", strtotime('+1 month', strtotime ($newMonth)));
 		$bank->save();
 		//end add modal next month
 
@@ -326,10 +342,116 @@ class DataTransaksiController extends Controller
 		$PB->keterangan_lk="Perubahan Modal Periode ".$tgl_akhir;
 		$PB->nominal_lk=$GetModalAkhir;
 		$PB->periode_lk=$tgl_akhir;
+		$PB->tahun_lk = date("Y", strtotime($tgl_akhir));
 		$PB->save();
 
 
-		return redirect('/jurnal_umum/'.$tgl_akhir);
+		// add Neraca
+		// GetKas
+		// cek
+		$kas = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 1)->get()->first();
+		if ($kas != null) {
+			$GetKasThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 1)->get()->first()->kredit_ns;
+			$GetKasThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 1)->get()->first()->debet_ns;
+			if ($GetKasThisPeriodeKredit) {
+				$GetKasThisPeriode=$GetKasThisPeriodeKredit;
+			}elseif ($GetKasThisPeriodeDebet) {
+				$GetKasThisPeriode=$GetKasThisPeriodeDebet;
+			}
+		}else{
+			$GetKasThisPeriode=0;
+		}
+
+		// GetBank
+		// cek
+		$bank = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 4)->get()->first();
+		if ($bank != null) {
+			$GetBankThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 4)->get()->first()->kredit_ns;
+			$GetBankThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 4)->get()->first()->debet_ns;
+			if ($GetBankThisPeriodeKredit) {
+				$GetBankThisPeriode=$GetBankThisPeriodeKredit;
+			}elseif ($GetBankThisPeriodeDebet) {
+				$GetBankThisPeriode=$GetBankThisPeriodeDebet;
+			}
+		}else{
+			$GetBankThisPeriode=0;
+		}
+
+		// GetPiutang
+		// cek
+		$piutang = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 5)->get()->first();
+		if ($piutang != null) {
+			$GetPiutangThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 5)->get()->first()->kredit_ns;
+			$GetPiutangThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 5)->get()->first()->debet_ns;
+			if ($GetPiutangThisPeriodeKredit) {
+				$GetPiutangThisPeriode=$GetPiutangThisPeriodeKredit;
+			}elseif ($GetPiutangThisPeriodeDebet) {
+				$GetPiutangThisPeriode=$GetPiutangThisPeriodeDebet;
+			}
+		}else{
+			$GetPiutangThisPeriode=0;
+		}
+
+		// GetPeralatan
+		// cek
+		$peralatan = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 8)->get()->first();
+		if ($peralatan != null) {
+			$GetPeralatanThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 8)->get()->first()->kredit_ns;
+			$GetPeralatanThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 8)->get()->first()->debet_ns;
+			if ($GetPeralatanThisPeriodeKredit) {
+				$GetPeralatanThisPeriode=$GetPeralatanThisPeriodeKredit;
+			}elseif ($GetPeralatanThisPeriodeDebet) {
+				$GetPeralatanThisPeriode=$GetPeralatanThisPeriodeDebet;
+			}
+		}else{
+			$GetPeralatanThisPeriode=0;
+		}
+
+		// GetPerlengkapan
+		// cek
+		$perlengkapan = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 12)->get()->first();
+		if ($perlengkapan != null) {
+			$GetPerlengkapanThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 12)->get()->first()->kredit_ns;
+			$GetPerlengkapanThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 12)->get()->first()->debet_ns;
+			if ($GetPerlengkapanThisPeriodeKredit) {
+				$GetPerlengkapanThisPeriode=$GetPerlengkapanThisPeriodeKredit;
+			}elseif ($GetPerlengkapanThisPeriodeDebet) {
+				$GetPerlengkapanThisPeriode=$GetPerlengkapanThisPeriodeDebet;
+			}
+		}else{
+			$GetPerlengkapanThisPeriode=0;
+		}
+
+		// GetUtangUsaha
+		// cek
+		$utangUsaha = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 11)->get()->first();
+		if ($utangUsaha != null) {
+			$GetUtangUsahaThisPeriodeKredit = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 11)->get()->first()->kredit_ns;
+			$GetUtangUsahaThisPeriodeDebet = Neraca_saldo::where('periode_ns', $tgl_akhir)->where('daftar_akuns_id', 11)->get()->first()->debet_ns;
+			if ($GetUtangUsahaThisPeriodeKredit) {
+				$GetUtangUsahaThisPeriode=$GetUtangUsahaThisPeriodeKredit;
+			}elseif ($GetUtangUsahaThisPeriodeDebet) {
+				$GetUtangUsahaThisPeriode=$GetUtangUsahaThisPeriodeDebet;
+			}
+		}else{
+			$GetUtangUsahaThisPeriode=0;
+		}
+
+		// GetPerubahanModal
+		$GetModalAkhirThisPeriode = Laporan_keuangan::where('jenis_laporan', 'Perubahan Modal')->where('periode_lk',$tgl_akhir)->get()->first()->nominal_lk;
+
+		$GetActiva = $GetKasThisPeriode+$GetBankThisPeriode+$GetPiutangThisPeriode+$GetPeralatanThisPeriode+$GetPerlengkapanThisPeriode;
+
+		// add neraca tabel
+		$PB = new Laporan_keuangan;
+		$PB->jenis_laporan="Neraca";
+		$PB->keterangan_lk="Neraca Periode ".$tgl_akhir;
+		$PB->nominal_lk=$GetActiva;
+		$PB->periode_lk=$tgl_akhir;
+		$PB->tahun_lk = date("Y", strtotime($tgl_akhir));
+		$PB->save();
+
+		return redirect('/data_transaksi');
 	}
 
 	public function store(Request $request)

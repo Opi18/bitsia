@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Data_user;
+use Alert;
 
 class DataUserController extends Controller
 {
@@ -16,7 +17,7 @@ class DataUserController extends Controller
 
     public function store(Request $request)
     {
-        
+
         if ($request->status == "Accounting") {
             $random="accounting".rand();
         }elseif ($request->status == "Pemilik") {
@@ -28,6 +29,7 @@ class DataUserController extends Controller
         $user->password=Hash::make($random);
         $user->status=$request->status;
         $user->save();
+        alert('Data Berhasil Di Tambah', ' ', 'success');
         return redirect('/data_user');
     }
 
@@ -37,6 +39,7 @@ class DataUserController extends Controller
         $user->nama=$request->nama;
         $user->status=$request->status;
         $user->save();
+        alert('Data Berhasil Di Ubah', ' ', 'success');
         return redirect('/data_user');
     }
 }

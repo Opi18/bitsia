@@ -40,14 +40,14 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="/data_daftar_akun" class="nav-link">
               <i class="nav-icon fas fa-list-alt"></i>
               <p>
                 Data Daftar Akun
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="/data_pemasukan" class="nav-link">
               <i class="nav-icon fas fa-list-alt"></i>

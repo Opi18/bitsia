@@ -1,4 +1,4 @@
-@extends('admins/layouts/main')
+@extends('pemilik/layouts/main')
 
 @section('title','SIA | Laporan Perubahan Modal')
 
@@ -41,11 +41,7 @@
                   <div class="col-md-3"><p>Rp. {{number_format($GetModalAwalThisPeriode)}}</p></div>
                 </div>
                 <div class="row justify-content-center">
-                  @if($GetLRThisPeriode < 0)
-                  <div class="col-md-5"><p>Rugi</p></div>
-                  @else
-                  <div class="col-md-5"><p>Laba</p></div>
-                  @endif
+                  <div class="col-md-5"><p>Laba/Rugi</p></div>
                   <div class="col-md-3"><p>Rp. {{number_format($GetLRThisPeriode)}}</p></div>
                 </div>
                 <div class="row justify-content-center">
@@ -54,11 +50,7 @@
                   <div class="col-md-1">+</div>
                 </div>
                 <div class="row justify-content-center">
-                  @if($GetLRThisPeriode < 0)
-                  <div class="col-md-4"><strong>Penurunan Modal</strong></div>
-                  @else
                   <div class="col-md-4"><strong>Kenaikan Modal</strong></div>
-                  @endif
                   <div class="col-md-2"><strong>Rp. {{number_format($GetMA_LR)}}</strong></div>
                 </div><<br>
                 <div class="row justify-content-center">

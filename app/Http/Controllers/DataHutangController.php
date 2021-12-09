@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use\App\Models\Data_transaksi;
 use\App\Models\Data_user;
 use\App\Models\Daftar_akun;
+use Alert;
 
 class DataHutangController extends Controller
 {
@@ -58,6 +59,7 @@ class DataHutangController extends Controller
         $data_hutang->nominal_transaksi=$request->nominal_transaksi;
         $data_hutang->tgl_transaksi=$request->tgl_transaksi;
         $data_hutang->save();
+        alert('Data Berhasil Di Tambah', ' ', 'success');
         return redirect('/data_hutang');
     }
 
@@ -97,6 +99,7 @@ class DataHutangController extends Controller
         $data_hutang->nominal_transaksi=$request->nominal_transaksi;
         $data_hutang->tgl_transaksi=$request->tgl_transaksi;
         $data_hutang->save();
+        alert('Data Berhasil Di Ubah', ' ', 'success');
         return redirect('/data_hutang');
     }
 

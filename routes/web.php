@@ -1,5 +1,5 @@
 <?php
-
+// USE ADMIN
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\DaftarAkunController;
@@ -9,14 +9,24 @@ use App\Http\Controllers\DataHutangController;
 use App\Http\Controllers\DataPiutangController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DataTransaksiController;
-use App\Http\Controllers\DataTransaksiPemilikController;
-use App\Http\Controllers\RiwayatPembatalanController;
 use App\Http\Controllers\JurnalUmumController;
 use App\Http\Controllers\BukuBesarController;
 use App\Http\Controllers\NeracaSaldoController;
 use App\Http\Controllers\LabaRugiController;
 use App\Http\Controllers\PerubahanModalController;
 use App\Http\Controllers\NeracaController;
+use App\Http\Controllers\RiwayatPembatalanController;
+
+// USE PEMILIK
+use App\Http\Controllers\DataTransaksiPemilikController;
+use App\Http\Controllers\JurnalUmumPemilikController;
+use App\Http\Controllers\BukuBesarPemilikController;
+use App\Http\Controllers\NeracaSaldoPemilikController;
+use App\Http\Controllers\LabaRugiPemilikController;
+use App\Http\Controllers\PerubahanModalPemilikController;
+use App\Http\Controllers\NeracaPemilikController;
+use App\Http\Controllers\RiwayatPembatalanPemilikController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,9 +43,7 @@ Route::get('/content', function () {
 	return view('admins.pages.content');
 })->middleware('SessionAdmins');
 
-Route::get('/dashboard', function () {
-	return view('admins.pages.dashboard');
-})->middleware('SessionAdmins');
+Route::get('/dashboard',[DashboardController::class, 'index'])->middleware('SessionAdmins');
 
 
 
@@ -97,10 +105,6 @@ Route::get('/data_transaksi', [DataTransaksiController::class, 'index'])->middle
 Route::post('/data_transaksi/generate', [DataTransaksiController::class, 'generate'])->middleware('SessionAdmins');
 
 
-Route::get('/cari_riwayat_pembatalan', [RiwayatPembatalanController::class, 'formFilter'])->middleware('SessionAdmins');
-Route::post('/riwayat_pembatalan', [RiwayatPembatalanController::class, 'filter'])->middleware('SessionAdmins');
-
-
 Route::get('/detail_jurnal_umum', [JurnalUmumController::class, 'index'])->middleware('SessionAdmins');
 Route::get('/jurnal_umum/{periode}', [JurnalUmumController::class, 'detail'])->middleware('SessionAdmins');
 
@@ -124,6 +128,9 @@ Route::get('/detail_perubahan_modal/{periode}', [PerubahanModalController::class
 Route::get('/neraca', [NeracaController::class, 'index'])->middleware('SessionAdmins');
 Route::get('/detail_neraca/{periode}', [NeracaController::class, 'detail'])->middleware('SessionAdmins');
 
+
+Route::get('/cari_riwayat_pembatalan', [RiwayatPembatalanController::class, 'formFilter'])->middleware('SessionAdmins');
+Route::post('/riwayat_pembatalan', [RiwayatPembatalanController::class, 'filter'])->middleware('SessionAdmins');
 // end admin 
 
 
@@ -138,29 +145,30 @@ Route::get('/dashboard_pemilik', function () {
 Route::get('/data_transaksi_pemilik', [DataTransaksiPemilikController::class, 'index'])->middleware('SessionPemilik');
 Route::post('/data_transaksi_pemilik/generate_pemilik', [DataTransaksiPemilikController::class, 'store'])->middleware('SessionPemilik');
 
-Route::get('/jurnal_umum_pemilik', function () {
-	return view('pemilik.pages.jurnal_umum_pemilik');
-})->middleware('SessionPemilik');
 
-Route::get('/buku_besar_pemilik', function () {
-	return view('pemilik.pages.buku_besar_pemilik');
-})->middleware('SessionPemilik');
+Route::get('/jurnal_umum_pemilik', [JurnalUmumController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_jurnal_umum_pemilik/{periode}', [JurnalUmumController::class, 'detail'])->middleware('SessionPemilik');
 
-Route::get('/neraca_saldo_pemilik', function () {
-	return view('pemilik.pages.neraca_saldo_pemilik');
-})->middleware('SessionPemilik');
 
-Route::get('/laba_rugi_pemilik', function () {
-	return view('pemilik.pages.laba_rugi_pemilik');
-})->middleware('SessionPemilik');
+Route::get('/buku_besar_pemilik', [BukuBesarController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_buku_besar_pemilik/{periode}', [BukuBesarController::class, 'detail'])->middleware('SessionPemilik');
 
-Route::get('/perubahan_modal_pemilik', function () {
-	return view('pemilik.pages.perubahan_modal_pemilik');
-})->middleware('SessionPemilik');
 
-Route::get('/neraca_pemilik', function () {
-	return view('pemilik.pages.neraca_pemilik');
-})->middleware('SessionPemilik');
+Route::get('/neraca_saldo_pemilik', [NeracaSaldoController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_neraca_saldo_pemilik/{periode}', [NeracaSaldoController::class, 'detail'])->middleware('SessionPemilik');
 
-Route::get('/riwayat_pembatalan_pemilik', [RiwayatPembatalanPemilikController::class, 'index'])->middleware('SessionPemilik');
-Route::post('/riwayat_pembatalan_pemilik/cari', [RiwayatPembatalanPemilikController::class, 'filter'])->middleware('SessionPemilik');
+
+Route::get('/laba_rugi_pemilik', [LabaRugiController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_laba_rugi_pemilik/{periode}', [LabaRugiController::class, 'detail'])->middleware('SessionPemilik');
+
+
+Route::get('/perubahan_modal_pemilik', [PerubahanModalController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_perubahan_modal_pemilik/{periode}', [PerubahanModalController::class, 'detail'])->middleware('SessionPemilik');
+
+
+Route::get('/neraca_pemilik', [NeracaController::class, 'index'])->middleware('SessionPemilik');
+Route::get('/detail_neraca_pemilik/{periode}', [NeracaController::class, 'detail'])->middleware('SessionPemilik');
+
+
+Route::get('/cari_riwayat_pembatalan_pemilik', [RiwayatPembatalanController::class, 'formFilter'])->middleware('SessionPemilik');
+Route::post('/riwayat_pembatalan_pemilik', [RiwayatPembatalanController::class, 'filter'])->middleware('SessionPemilik');
